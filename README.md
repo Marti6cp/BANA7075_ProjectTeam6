@@ -1,1 +1,7 @@
-# BANA7075_ProjectTeam6
+# Amazon E-Commerce Product Demand Forecasting 
+BANA 7075 - Final Project - Team 6 
+## Description
+This project uses machine learning to forecast weekly product demand for Amazon e-commerce data, where demand is the number of purchase transactions per product, per month. The goal is to help the Amazon inventory teams make better restocking decisions and reduce stockouts and excess inventory. 
+
+## Team Members 
+Tayo Akinyeke, William Eades, Christopher Martinez, Yosef Othman, and Matthew True 
