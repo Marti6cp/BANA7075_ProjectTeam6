@@ -8,7 +8,13 @@ from pydantic import BaseModel
 app = FastAPI()
 folder = Path(__file__).resolve().parent
 
-model = joblib.load(folder / "best_model.joblib")
+from sklearn.pipeline import Pipeline
+from xgboost import XGBRegressor
+preprocessor = joblib.load(folder / "model_preprocessor.joblib")
+regressor = XGBRegressor()
+regressor.load_model(folder / "demand_model.ubj")
+model = Pipeline([("preprocessor", preprocessor),
+    ("model", regressor)])
 features = json.loads((folder / "model_features.json").read_text())
 
 
